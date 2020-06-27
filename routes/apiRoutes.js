@@ -2,6 +2,7 @@ const fs = require("fs")
 const path = require("path");
 
 var noteData;
+var currentID = 7;
 module.exports = function (app) {
     fs.readFile("./db/db.json", "utf8", function (err, data) {
         if (err) throw err;
@@ -15,6 +16,8 @@ module.exports = function (app) {
     app.post("/api/notes", function (req, res) {
         console.log("test");
         var newNote = req.body;
+        newNote.id = noteData.length +1;
+        console.log("new note", newNote)
         noteData.push(newNote);
         let parsedata = JSON.stringify(noteData)
         fs.writeFile(path.join('./db/db.json'), parsedata, (err) => {
@@ -27,13 +30,15 @@ module.exports = function (app) {
         console.log("erase");
         var deleteData = req.params.id;
         console.log(deleteData)
-        for (i = 0; i < noteData.length; i++) {
-            if (deleteData === noteData[i].title) {
-                noteData.splice(i, 1)
-            };
-        };
+       /*  //for (i = 0; i < noteData.length; i++) {
+            //if (deleteData === noteData[i].id) {
+               // noteData=noteData.splice(i, 1)
+            //};
+        //}; */
+        noteData = noteData.filter(note=>note.id.toString()!==deleteData);
+        console.log("note data", noteData)
         let parsedata = JSON.stringify(noteData)
-        fs.writeFile(path.join('db.json'), parsedata, (err) => {
+        fs.writeFile(path.join('./db/db.json'), parsedata, (err) => {
             if (err) throw err;
         })
         console.log(noteData)
