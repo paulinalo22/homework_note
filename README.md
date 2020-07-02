@@ -19,7 +19,6 @@ This super fun and functional app allows peeps to write, save and delete notes. 
 - [License](#License)
 - [Contributors](#Contributors)
 - [Test](#Test)
-- [Repository Link](#Repository)
 - [GitHub Info](#GitHub) 
 
 
