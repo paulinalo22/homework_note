@@ -5,7 +5,7 @@
 
 This super fun and functional app allows peeps to write, save and delete notes.  The computer (HAL) will store all your notes and you'll be able to delete all the garbage as well. 
 
-# **README example**
+# **Licenses**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
