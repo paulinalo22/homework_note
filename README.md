@@ -43,11 +43,6 @@ Productivity
 
 Tests: done
 
-
-## Repository
-
-- [Project Repo](https://github.com/paulinalo22/homework_readUwroteU)
-
 ## GitHub
 
 ![Image of me](https://avatars0.githubusercontent.com/u/62158203?v=4)
